@@ -1,0 +1,26 @@
+[Unit]
+Description=GlobalGreen's distributed currency daemon
+After=network.target
+
+[Service]
+User=globalgreen
+Group=globalgreen
+
+Type=forking
+PIDFile=/var/lib/globalgreend/globalgreend.pid
+
+ExecStart=/usr/bin/globalgreend -daemon -pid=/var/lib/globalgreend/globalgreend.pid \
+          -conf=/etc/globalgreen/globalgreen.conf -datadir=/var/lib/globalgreend
+
+ExecStop=-/usr/bin/globalgreen-cli -conf=/etc/globalgreen/globalgreen.conf \
+         -datadir=/var/lib/globalgreend stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

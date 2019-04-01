@@ -1,0 +1,26 @@
+# /etc/conf.d/globalgreend: config file for /etc/init.d/globalgreend
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/globalgreen/globalgreen.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/globalgreend"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/globalgreend.pid"
+
+# Where to write globalgreend data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/globalgreend"
+
+# User and group to own globalgreend process
+#BITCOIND_USER="globalgreen"
+#BITCOIND_GROUP="globalgreen"
+
+# Path to globalgreend executable
+#BITCOIND_BIN="/usr/bin/globalgreend"
+
+# Nice value to run globalgreend under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

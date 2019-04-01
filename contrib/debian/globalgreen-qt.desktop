@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=GlobalGreen
+Comment=GlobalGreen P2P Cryptocurrency
+Comment[fr]=GlobalGreen, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=GlobalGreen, eşten eşe kriptografik sanal para birimi
+Exec=globalgreen-qt %u
+Terminal=false
+Type=Application
+Icon=globalgreen128
+MimeType=x-scheme-handler/globalgreen;
+Categories=Office;Finance;
